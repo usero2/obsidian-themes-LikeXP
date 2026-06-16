@@ -101,10 +101,10 @@ body {
   --text-accent-hover: var(--xp-accent-hover);
   
   /* Icons */
-  --icon-color: var(--xp-text-muted);
-  --icon-color-hover: var(--xp-text);
-  --icon-color-active: var(--xp-accent);
-  --icon-color-focused: var(--xp-text);
+  --icon-color: var(--xp-accent);
+  --icon-color-hover: var(--xp-accent-hover);
+  --icon-color-active: var(--xp-text);
+  --icon-color-focused: var(--xp-accent-hover);
   --nav-collapse-icon-color: var(--xp-text-faint);
   --nav-collapse-icon-color-hover: var(--xp-text);
   
@@ -367,26 +367,41 @@ input:focus, textarea:focus, select:focus, .dropdown:focus, .search-input-contai
 .nav-folder-title .collapse-icon::after {
   content: "";
   display: inline-block;
-  width: 14px;
-  height: 14px;
-  background-color: var(--nav-collapse-icon-color);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-  transition: background-color 0.15s ease;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: opacity 0.15s ease;
+  opacity: 0.85;
 }
 
 /* Hover color */
 .nav-folder-title:hover .collapse-icon::after {
-  background-color: var(--nav-collapse-icon-color-hover);
+  opacity: 1;
 }
 
 /* Closed Folder Icon (Replaces Right Arrow) */
 .nav-folder.is-collapsed > .nav-folder-title .collapse-icon::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ffd766' stroke='%23d19d00' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
 }
 
 /* Open Folder Icon (Replaces Down Arrow) */
 .nav-folder:not(.is-collapsed) > .nav-folder-title .collapse-icon::after {
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%23ffd766' stroke='%23d19d00' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
 }
+
+/* --- Colorful Icons (Windows XP Control Panel Style) --- */
+
+/* Create a repeating multi-color pattern for lists of icons */
+.vertical-tab-nav-item:nth-child(5n+1) svg, .workspace-ribbon .clickable-icon:nth-child(5n+1) svg, .nav-action-button:nth-child(5n+1) svg { color: #0055e5; }
+.vertical-tab-nav-item:nth-child(5n+2) svg, .workspace-ribbon .clickable-icon:nth-child(5n+2) svg, .nav-action-button:nth-child(5n+2) svg { color: #e6a514; }
+.vertical-tab-nav-item:nth-child(5n+3) svg, .workspace-ribbon .clickable-icon:nth-child(5n+3) svg, .nav-action-button:nth-child(5n+3) svg { color: #4caf50; }
+.vertical-tab-nav-item:nth-child(5n+4) svg, .workspace-ribbon .clickable-icon:nth-child(5n+4) svg, .nav-action-button:nth-child(5n+4) svg { color: #f44336; }
+.vertical-tab-nav-item:nth-child(5n+5) svg, .workspace-ribbon .clickable-icon:nth-child(5n+5) svg, .nav-action-button:nth-child(5n+5) svg { color: #9c27b0; }
+
+.theme-dark .vertical-tab-nav-item:nth-child(5n+1) svg, .theme-dark .workspace-ribbon .clickable-icon:nth-child(5n+1) svg, .theme-dark .nav-action-button:nth-child(5n+1) svg { color: #66b2ff; }
+.theme-dark .vertical-tab-nav-item:nth-child(5n+2) svg, .theme-dark .workspace-ribbon .clickable-icon:nth-child(5n+2) svg, .theme-dark .nav-action-button:nth-child(5n+2) svg { color: #fcd84c; }
+.theme-dark .vertical-tab-nav-item:nth-child(5n+3) svg, .theme-dark .workspace-ribbon .clickable-icon:nth-child(5n+3) svg, .theme-dark .nav-action-button:nth-child(5n+3) svg { color: #81c784; }
+.theme-dark .vertical-tab-nav-item:nth-child(5n+4) svg, .theme-dark .workspace-ribbon .clickable-icon:nth-child(5n+4) svg, .theme-dark .nav-action-button:nth-child(5n+4) svg { color: #e57373; }
+.theme-dark .vertical-tab-nav-item:nth-child(5n+5) svg, .theme-dark .workspace-ribbon .clickable-icon:nth-child(5n+5) svg, .theme-dark .nav-action-button:nth-child(5n+5) svg { color: #ba68c8; }
