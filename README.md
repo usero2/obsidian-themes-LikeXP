@@ -43,9 +43,23 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 
 ## 📝 Changelog
 
+### v1.0.3
+- **Fix**: Completely resolved the issue where the titlebar and its bottom border overlapped with the tab headers in modern Obsidian versions.
+- **Fix**: More aggressive CSS targeting to hide the centered window title (`.titlebar-text` and variants) to prevent overlap.
+
 ### v1.0.2
+- **Update**: Minor internal version bump and adjustments.
+
+### v1.0.1
 - **Fix**: Hid the titlebar text (`.titlebar-text`) to prevent it from overlapping with workspace tabs when using hidden window frames.
 - **Fix**: Corrected toggle switch colors so the "off" state (gray) and "on" state (blue) are distinguishable.
+
+## 💖 Support / Donate
+
+If you enjoy the nostalgia of this theme and would like to support its continued development, consider buying me a coffee or supporting the project!
+
+- [Buy Me a Coffee](https://www.buymeacoffee.com/) (Placeholder link)
+- [Ko-fi](https://ko-fi.com/) (Placeholder link)
 
 ## 📝 License
 
