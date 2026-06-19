@@ -43,7 +43,7 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 
 ## 📝 Changelog
 
-### v1.0.1
+### v1.0.2
 - **Fix**: Hid the titlebar text (`.titlebar-text`) to prevent it from overlapping with workspace tabs when using hidden window frames.
 - **Fix**: Corrected toggle switch colors so the "off" state (gray) and "on" state (blue) are distinguishable.
 
