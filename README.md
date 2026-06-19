@@ -41,6 +41,12 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 - Edit the `body { ... }` block to change **Light Mode** colors.
 - Edit the `.theme-dark { ... }` block to change **Dark Mode** colors.
 
+## 📝 Changelog
+
+### v1.0.1
+- **Fix**: Hid the titlebar text (`.titlebar-text`) to prevent it from overlapping with workspace tabs when using hidden window frames.
+- **Fix**: Corrected toggle switch colors so the "off" state (gray) and "on" state (blue) are distinguishable.
+
 ## 📝 License
 
 MIT License

@@ -137,6 +137,14 @@ body {
   --tab-background: var(--tab-inactive);
   --tab-text-color: var(--xp-text-muted);
   --tab-outline-color: var(--xp-border);
+  
+  /* Toggles and Checkboxes */
+  --checkbox-bg: var(--bg-color-secondary);
+  --checkbox-border-color: var(--xp-border);
+  --checkbox-bg-active: var(--xp-accent);
+  --toggle-bg: var(--xp-border);
+  --toggle-bg-active: var(--xp-accent);
+  --toggle-thumb-color: var(--xp-bg);
 }
 
 /* Base styles for XP feel */
@@ -157,6 +165,7 @@ body {
 }
 
 .titlebar-text {
+  display: none !important;
   font-family: "Trebuchet MS", "Tahoma", sans-serif;
   font-size: 13px;
   letter-spacing: 0.5px;
@@ -284,6 +293,19 @@ input:focus, textarea:focus, select:focus, .dropdown:focus, .search-input-contai
 .search-input-container:focus-within input {
   box-shadow: none !important;
   border: none !important;
+}
+
+/* --- Toggles / Checkboxes --- */
+.checkbox-container {
+  background-color: var(--xp-border) !important;
+}
+
+.checkbox-container.is-enabled {
+  background-color: var(--xp-accent) !important;
+}
+
+.checkbox-container:after {
+  background-color: var(--xp-bg) !important;
 }
 
 /* --- File Explorer --- */
