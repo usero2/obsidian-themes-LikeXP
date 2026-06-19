@@ -173,16 +173,12 @@ div[class*="titlebar-text"],
   visibility: hidden !important;
 }
 
-/* Prevent opaque titlebar from overlapping workspace */
+/* Make titlebar transparent in Hidden frame mode to prevent opaque overlapping */
 body.is-hidden-frameless .titlebar {
-  height: 40px !important;
-  max-height: 40px !important;
-  overflow: hidden !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
   z-index: 100 !important;
-}
-
-body.is-hidden-frameless .app-container {
-  padding-top: 40px !important;
 }
 
 /* Ensure tab container is not negatively margined into the titlebar */

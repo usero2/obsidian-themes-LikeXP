@@ -43,6 +43,9 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 
 ## 📝 Changelog
 
+### v1.0.6
+- **Fix**: Made the titlebar transparent when Obsidian is set to "Hidden" window frame style. This preserves the window controls while entirely removing the opaque overlapping bar.
+
 ### v1.0.5
 - **Fix**: Synchronized the `--header-height` across the entire app to exactly `40px` to permanently resolve the physical overlap between the titlebar and workspace elements (tabs and ribbon icons).
 
