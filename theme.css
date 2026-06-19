@@ -165,10 +165,16 @@ body {
 
 .titlebar-text,
 .titlebar-inner-title,
-div[class*="titlebar-text"] {
+div[class*="titlebar-text"],
+.titlebar-inner > div:not(.titlebar-button-container):not(.workspace-tab-header-container) {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
+}
+
+/* Prevent opaque titlebar from slicing the top of the workspace tabs and arrows */
+.workspace .workspace-tab-header-container {
+  padding-top: 6px !important;
 }
 
 .titlebar-button-container {

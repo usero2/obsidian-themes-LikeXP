@@ -43,6 +43,9 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 
 ## 📝 Changelog
 
+### v1.0.4
+- **Hotfix**: Completely redesigned the overlap fix. The top of the workspace (tabs and arrows) is now properly pushed down to prevent the opaque titlebar from slicing it. Also applied a bulletproof rule to hide any stray title text.
+
 ### v1.0.3
 - **Fix**: Completely resolved the issue where the titlebar and its bottom border overlapped with the tab headers in modern Obsidian versions.
 - **Fix**: More aggressive CSS targeting to hide the centered window title (`.titlebar-text` and variants) to prevent overlap.
