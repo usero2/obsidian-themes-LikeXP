@@ -43,6 +43,9 @@ This theme is built using Obsidian's CSS variables combined with custom XP varia
 
 ## 📝 Changelog
 
+### v1.0.5
+- **Fix**: Synchronized the `--header-height` across the entire app to exactly `40px` to permanently resolve the physical overlap between the titlebar and workspace elements (tabs and ribbon icons).
+
 ### v1.0.4
 - **Hotfix**: Completely redesigned the overlap fix. The top of the workspace (tabs and arrows) is now properly pushed down to prevent the opaque titlebar from slicing it. Also applied a bulletproof rule to hide any stray title text.
 

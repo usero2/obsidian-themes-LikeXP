@@ -151,6 +151,7 @@ body {
 body {
   background-color: var(--window-bg);
   font-family: var(--font-interface);
+  --header-height: 40px !important;
 }
 
 /* --- Titlebar --- */
@@ -172,9 +173,21 @@ div[class*="titlebar-text"],
   visibility: hidden !important;
 }
 
-/* Prevent opaque titlebar from slicing the top of the workspace tabs and arrows */
-.workspace .workspace-tab-header-container {
-  padding-top: 6px !important;
+/* Prevent opaque titlebar from overlapping workspace */
+body.is-hidden-frameless .titlebar {
+  height: 40px !important;
+  max-height: 40px !important;
+  overflow: hidden !important;
+  z-index: 100 !important;
+}
+
+body.is-hidden-frameless .app-container {
+  padding-top: 40px !important;
+}
+
+/* Ensure tab container is not negatively margined into the titlebar */
+.workspace-tab-header-container {
+  margin-top: 0 !important;
 }
 
 .titlebar-button-container {
